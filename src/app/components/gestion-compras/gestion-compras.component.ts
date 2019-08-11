@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GestionComprasComponent implements OnInit {
 
+  users: Array<any>;
+  
   constructor() { }
 
   ngOnInit() {

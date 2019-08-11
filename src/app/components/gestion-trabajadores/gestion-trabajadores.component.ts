@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GestionTrabajadoresComponent implements OnInit {
 
+  user: Array<any>;
   constructor() { }
 
   ngOnInit() {
