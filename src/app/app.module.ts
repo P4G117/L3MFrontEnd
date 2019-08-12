@@ -19,6 +19,13 @@ import { ListadoProductosComponent } from './components/listado-productos/listad
 import { ListadoProductosSucursalComponent } from './components/listado-productos-sucursal/listado-productos-sucursal.component';
 import { PuntoVentaComponent } from './components/punto-venta/punto-venta.component';
 import { LoginComponent } from './components/login/login.component';
+import { SucursalAComponent } from './components/sucursal-a/sucursal-a.component';
+import { SucursalBComponent } from './components/sucursal-b/sucursal-b.component';
+import { SucursalCComponent } from './components/sucursal-c/sucursal-c.component';
+import { GastosSucursalAComponent } from './components/gastos-sucursal-a/gastos-sucursal-a.component';
+import { GastosSucursalBComponent } from './components/gastos-sucursal-b/gastos-sucursal-b.component';
+import { GastosSucursalCComponent } from './components/gastos-sucursal-c/gastos-sucursal-c.component';
+import { GastosGeneralesComponent } from './components/gastos-generales/gastos-generales.component';
 
 
 
@@ -40,7 +47,15 @@ import { LoginComponent } from './components/login/login.component';
     ListadoProductosComponent,
     ListadoProductosSucursalComponent,
     PuntoVentaComponent,
-    LoginComponent
+    LoginComponent,
+    SucursalAComponent,
+    SucursalBComponent,
+    SucursalCComponent,
+    GastosSucursalAComponent,
+    GastosSucursalBComponent,
+    GastosSucursalCComponent,
+    GastosGeneralesComponent,
+    
 
   ],
   imports: [

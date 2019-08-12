@@ -1,17 +1,13 @@
 <div class="col-md-12 user-container">
-  <h2 style="margin: auto; padding: 10px"> Gestionar Productos</h2>
-  <button class="btn btn-danger" style="width:100px; margin: 15px; float:right" (click)="addUser()"> Agregar</button>
-  <table class="table table-striped">
+  <h2 style="margin: auto; padding: 10px"> Listado de Gastos Sucursal B</h2>
+    <table class="table table-striped">
     <thead>
     <tr>
-      <th class="hidden">Nombre</th>
-      <th>Descripcion</th>
-      <th>Código Baras</th>
+      <th class="hidden">Fecha</th>
       <th>Proveedor</th>
-      <th>Precio Compra</th>
-      <th>Impuesto</th>
-      <th>Descuento</th>
-    </tr>
+      <th>Descripción</th>
+      <th>Monto</th>
+      </tr>
     </thead>
     <tbody>
     <tr *ngFor="let user of users">

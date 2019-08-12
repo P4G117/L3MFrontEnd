@@ -1,3 +1,24 @@
-<p>
-  listado-productos works!
-</p>
+<div class="col-md-12 user-container">
+  <h2 style="margin: auto; padding: 10px"> Listado de Productos</h2>
+    <table class="table table-striped">
+    <thead>
+    <tr>
+      <th class="hidden">Producto</th>
+      <th>Costo Producto</th>
+      <th>Existencia</th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of users">
+      <td class="hidden"></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><button class="btn btn-success" (click)="deleteUser(user)"> Delete</button>
+        <button class="btn btn-success" (click)="editUser(user)" style="margin-left: 20px;"> Edit</button></td>
+    </tr>
+    </tbody>
+  </table>
+</div>

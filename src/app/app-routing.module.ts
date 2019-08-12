@@ -16,6 +16,13 @@ import { ListadoProductosComponent } from './components/listado-productos/listad
 import { ListadoProductosSucursalComponent } from './components/listado-productos-sucursal/listado-productos-sucursal.component';
 import { PuntoVentaComponent } from './components/punto-venta/punto-venta.component';
 import { LoginComponent } from './components/login/login.component';
+import { SucursalAComponent } from './components/sucursal-a/sucursal-a.component';
+import { SucursalBComponent } from './components/sucursal-b/sucursal-b.component';
+import { SucursalCComponent } from './components/sucursal-c/sucursal-c.component';
+import { GastosGeneralesComponent } from './components/gastos-generales/gastos-generales.component';
+import { GastosSucursalAComponent } from './components/gastos-sucursal-a/gastos-sucursal-a.component';
+import { GastosSucursalBComponent } from './components/gastos-sucursal-b/gastos-sucursal-b.component';
+import { GastosSucursalCComponent } from './components/gastos-sucursal-c/gastos-sucursal-c.component';
 
 const routes: Routes = [
   {
@@ -72,7 +79,7 @@ const routes: Routes = [
     component: ListadoGastosComponent,
   },
   {
-    path: 'listado-prodcutos',
+    path: 'listado-productos',
     component: ListadoProductosComponent,
   },
   {
@@ -86,6 +93,34 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent,
+  },
+  {
+    path: 'sucursal-a',
+    component: SucursalAComponent,
+  },
+  {
+    path: 'sucursal-b',
+    component: SucursalBComponent,
+  },
+  {
+    path: 'sucursal-c',
+    component: SucursalCComponent,
+  },
+  {
+    path: 'gastos-generales',
+    component: GastosGeneralesComponent,
+  },
+  {
+    path: 'gastos-sucursal-a',
+    component: GastosSucursalAComponent,
+  },
+  {
+    path: 'gastos-sucursal-b',
+    component: GastosSucursalBComponent,
+  },
+  {
+    path: 'gastos-sucursal-c',
+    component: GastosSucursalCComponent,
   },
 ];
 
