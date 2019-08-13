@@ -23,6 +23,20 @@ import { GastosGeneralesComponent } from './components/gastos-generales/gastos-g
 import { GastosSucursalAComponent } from './components/gastos-sucursal-a/gastos-sucursal-a.component';
 import { GastosSucursalBComponent } from './components/gastos-sucursal-b/gastos-sucursal-b.component';
 import { GastosSucursalCComponent } from './components/gastos-sucursal-c/gastos-sucursal-c.component';
+import { AnadirRolComponent } from './components/anadir-rol/anadir-rol.component';
+import { EditarRolComponent } from './components/editar-rol/editar-rol.component';
+import { EditarSucursalComponent } from './components/editar-sucursal/editar-sucursal.component';
+import { EditarTrabajadoresComponent } from './components/editar-trabajadores/editar-trabajadores.component';
+import { EditarProveedoresComponent } from './components/editar-proveedores/editar-proveedores.component';
+import { EditarProductosComponent } from './components/editar-productos/editar-productos.component';
+import { EditarComprasComponent } from './components/editar-compras/editar-compras.component';
+import { AnadirSucursalComponent } from './components/anadir-sucursal/anadir-sucursal.component';
+import { AnadirTrabajadoresComponent } from './components/anadir-trabajadores/anadir-trabajadores.component';
+import { AnadirProveedorComponent } from './components/anadir-proveedor/anadir-proveedor.component';
+import { AnadirProductosComponent } from './components/anadir-productos/anadir-productos.component';
+import { AnadirComprasComponent } from './components/anadir-compras/anadir-compras.component';
+import { AsignacionHorasComponent } from './components/asignacion-horas/asignacion-horas.component';
+
 
 const routes: Routes = [
   {
@@ -39,7 +53,7 @@ const routes: Routes = [
     component: AdministrationComponent,
   },
   {
-    path: 'asigancion-horas-laboradas',
+    path: 'asignacion-horas-laboradas',
     component: AsigancionHorasLaboradasComponent,
   },
   {
@@ -121,6 +135,58 @@ const routes: Routes = [
   {
     path: 'gastos-sucursal-c',
     component: GastosSucursalCComponent,
+  },
+  {
+    path: 'anadir-rol',
+    component: AnadirRolComponent,
+  },
+  {
+    path: 'anadir-sucursal',
+    component: AnadirSucursalComponent,
+  },
+  {
+    path: 'anadir-trabajadores',
+    component: AnadirTrabajadoresComponent,
+  },
+  {
+    path: 'anadir-proveedor',
+    component: AnadirProveedorComponent,
+  },
+  {
+    path: 'anadir-productos',
+    component: AnadirProductosComponent,
+  },
+  {
+    path: 'anadir-compras',
+    component: AnadirComprasComponent,
+  },
+  {
+    path: 'editar-rol',
+    component: EditarRolComponent,
+  },
+  {
+    path: 'editar-sucursal',
+    component: EditarSucursalComponent,
+  },
+  {
+    path: 'editar-trabajadores',
+    component: EditarTrabajadoresComponent,
+  },
+  {
+    path: 'editar-proveedores',
+    component: EditarProveedoresComponent,
+  },
+  {
+    path: 'editar-productos',
+    component: EditarProductosComponent,
+  },
+  {
+    path: 'editar-compras',
+    component: EditarComprasComponent,
+  },
+  {
+    path: 'asignacion-horas',
+    component: AsignacionHorasComponent,
   },
 ];
 

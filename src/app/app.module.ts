@@ -26,6 +26,19 @@ import { GastosSucursalAComponent } from './components/gastos-sucursal-a/gastos-
 import { GastosSucursalBComponent } from './components/gastos-sucursal-b/gastos-sucursal-b.component';
 import { GastosSucursalCComponent } from './components/gastos-sucursal-c/gastos-sucursal-c.component';
 import { GastosGeneralesComponent } from './components/gastos-generales/gastos-generales.component';
+import { AnadirRolComponent } from './components/anadir-rol/anadir-rol.component';
+import { EditarRolComponent } from './components/editar-rol/editar-rol.component';
+import { AnadirSucursalComponent } from './components/anadir-sucursal/anadir-sucursal.component';
+import { AnadirTrabajadoresComponent } from './components/anadir-trabajadores/anadir-trabajadores.component';
+import { AnadirProveedorComponent } from './components/anadir-proveedor/anadir-proveedor.component';
+import { AnadirProductosComponent } from './components/anadir-productos/anadir-productos.component';
+import { AnadirComprasComponent } from './components/anadir-compras/anadir-compras.component';
+import { EditarSucursalComponent } from './components/editar-sucursal/editar-sucursal.component';
+import { EditarTrabajadoresComponent } from './components/editar-trabajadores/editar-trabajadores.component';
+import { EditarProveedoresComponent } from './components/editar-proveedores/editar-proveedores.component';
+import { EditarProductosComponent } from './components/editar-productos/editar-productos.component';
+import { EditarComprasComponent } from './components/editar-compras/editar-compras.component';
+import { AsignacionHorasComponent } from './components/asignacion-horas/asignacion-horas.component';
 
 
 
@@ -55,6 +68,19 @@ import { GastosGeneralesComponent } from './components/gastos-generales/gastos-g
     GastosSucursalBComponent,
     GastosSucursalCComponent,
     GastosGeneralesComponent,
+    AnadirRolComponent,
+    EditarRolComponent,
+    AnadirSucursalComponent,
+    AnadirTrabajadoresComponent,
+    AnadirProveedorComponent,
+    AnadirProductosComponent,
+    AnadirComprasComponent,
+    EditarSucursalComponent,
+    EditarTrabajadoresComponent,
+    EditarProveedoresComponent,
+    EditarProductosComponent,
+    EditarComprasComponent,
+    AsignacionHorasComponent,
     
 
   ],

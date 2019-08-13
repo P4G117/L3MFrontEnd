@@ -3,6 +3,7 @@
     <table class="table table-striped">
     <thead>
     <tr>
+      <th></th>
       <th class="hidden">Fecha</th>
       <th>Proveedor</th>
       <th>Descripción</th>
@@ -12,13 +13,10 @@
     <tbody>
     <tr *ngFor="let user of users">
       <td class="hidden"></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td><button class="btn btn-success" (click)="deleteUser(user)"> Delete</button>
-        <button class="btn btn-success" (click)="editUser(user)" style="margin-left: 20px;"> Edit</button></td>
+      <td>{{user.fechagsa}}</td>
+      <td>{{user.proveedorgsa}}</td>
+      <td>{{user.descripciongsa}}</td>
+      <td>{{user.montogsa}}</td>
     </tr>
     </tbody>
   </table>

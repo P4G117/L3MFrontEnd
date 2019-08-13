@@ -3,6 +3,7 @@
     <table class="table table-striped">
     <thead>
     <tr>
+      <th></th>
       <th class="hidden">Cajero</th>
       <th>Sucursal</th>
       <th>Productos(s)</th>
@@ -17,13 +18,15 @@
     <tbody>
     <tr *ngFor="let user of users">
       <td class="hidden"></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td><button class="btn btn-success" (click)="deleteUser(user)"> Delete</button>
-        <button class="btn btn-success" (click)="editUser(user)" style="margin-left: 20px;"> Edit</button></td>
+      <td>{{user.cajero}}</td>
+      <td>{{user.sucursal}}</td>
+      <td>{{user.productos}}</td>
+      <td>{{user.cantidad}}</td>
+      <td>{{user.punit}}</td>
+      <td>{{user.ptotal}}</td>
+      <td>{{user.vtotal}}</td>
+      <td>{{user.descuento}}</td>
+      <td>{{user.impuesto}}</td>
     </tr>
     </tbody>
   </table>

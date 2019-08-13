@@ -1,0 +1,60 @@
+ <div class="split left">
+      <h2 class="text-center">Editar Trabajadores</h2>
+      
+      <img class="center"  alt="Responsive image" style="width:300px;height:300px;" src="../../../assets/img/Añadir.png">
+  
+    </div>
+  
+  <div class="split right">
+  <div class="col-md-6 user-container">
+      
+      
+        <div class="form-group">
+          <label for="trabnumero"><b>Trabajador Numero</b>:</label>
+          <input formControlName="trabnumero" placeholder="Consecuente" name="trabnumero" class="form-control" id="trabnumero">
+        </div>
+    
+        <div class="form-group">
+          <label for="nombre"><b>Nombre</b></label>
+          <input formControlName="nombre" placeholder="Nombre" name="nombre" class="form-control" id="nombre">
+        </div>
+    
+        <div class="form-group">
+          <label for="apellido1"><b>Apellido 1</b></label>
+          <input formControlName="apellido1" placeholder="Apellido 1" name="apellido1" class="form-control" id="apellido1">
+        </div>
+    
+        <div class="form-group">
+          <label for="apellido2"><b>Apellido 2</b></label>
+          <input formControlName="apellido2" placeholder="Apellido 2" name="apellido2" class="form-control" id="apellido2">
+        </div>
+    
+        <div class="form-group">
+          <label for="cedula"><b>Cédula</b></label>
+          <input formControlName="cedula" placeholder="Cédula" name="cedula" class="form-control" id="cedula">
+        </div>
+  
+        <div class="form-group">
+          <label for="fnacimiento"><b>Fecha Nacimiento</b></label>
+          <input formControlName="fnacimiento" placeholder="Fecha Nacimiento" name="fnacimiento" class="form-control" id="fnacimiento">
+        </div>
+  
+        <div class="form-group">
+            <label for="fingreso"><b>Fecha Ingreso</b></label>
+            <input formControlName="fingreso" placeholder="Fecha Ingreso" name="fingreso" class="form-control" id="fingreso">
+        </div>
+  
+        <div class="form-group">
+            <label for="sucursaltrab"><b>Sucursal de Trabajo</b></label>
+            <input formControlName="sucursaltrab" placeholder="Sucursal" name="sucursaltrab" class="form-control" id="sucursaltrab">
+        </div>
+  
+        <div class="form-group">
+            <label for="salhora"><b>Salario por Hora</b></label>
+            <input formControlName="salhora" placeholder="Salario" name="salhora" class="form-control" id="salhora">
+        </div>
+    
+        <button class="btn btn-success"[routerLink]="'/gestion-trabajadores'">Guardar</button>
+      
+    </div>
+    </div>

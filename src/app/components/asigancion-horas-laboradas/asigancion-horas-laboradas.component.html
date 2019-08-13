@@ -1,3 +1,28 @@
-<p>
-  asigancion-horas-laboradas works!
-</p>
+<div class="col-md-12 user-container">
+    <h2 style="margin: auto; padding: 10px"> Asignacion Horas Laboradas</h2>
+    <button class="btn btn-danger" style="width:200px; margin: 15px; float:right" [routerLink]="'/asignacion-horas'"> Asignar Horas</button>
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th></th>
+        <th class="hidden">Nombre</th>
+        <th>Apellido 1</th>
+        <th>Apellido 2</th>
+        <th>Horas Semanales</th>
+        <th>Horas Extra</th>
+        
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let user of users">
+        <td class="hidden"></td>
+        <td>{{user.nombre}}</td>
+        <td>{{user.ape1}}</td>
+        <td>{{user.ape2}}</td>
+        <td>{{user.hsemana}}</td>
+        <td>{{user.hextra}}</td>
+          
+      </tr>
+      </tbody>
+    </table>
+  </div>

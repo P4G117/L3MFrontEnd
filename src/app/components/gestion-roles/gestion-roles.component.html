@@ -1,13 +1,17 @@
 <div class="col-md-12 user-container">
   <h2 style="margin: auto; padding: 10px"> Gestionar Roles</h2>
-  <button class="btn btn-danger" style="width:100px; margin: 15px; float:right" (click)="addUser()"> Agregar</button>
+  <button class="btn btn-danger" style="width:100px; margin: 15px; float:right" [routerLink]="'/anadir-rol'" > Agregar</button>
   <table class="table table-striped">
     <thead>
     <tr>
+        <th></th>
       <th class="hidden">Id</th>
       <th>Nombre</th>
+      
       <th>Apellido 1</th>
+      
       <th>Apellido 2</th>
+      
       <th>Rol</th>
       
     </tr>
@@ -15,13 +19,13 @@
     <tbody>
     <tr *ngFor="let user of users">
       <td class="hidden"></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td><button class="btn btn-success" (click)="deleteUser(user)"> Delete</button>
-        <button class="btn btn-success" (click)="editUser(user)" style="margin-left: 20px;"> Edit</button></td>
+      <td>{{user.id}}</td>
+      <td>{{user.nombre}}</td>
+      <td>{{user.apellido1}}</td>
+      <td>{{user.apellido2}}</td>
+      <td>{{user.rol}}</td>
+      <td><button class="btn btn-success" > Eliminar</button>
+        <button class="btn btn-success" [routerLink]="'/editar-rol'"  style="margin-left: 20px;"> Editar</button></td>
     </tr>
     </tbody>
   </table>
