@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {DeviceDetectorModule} from 'ngx-device-detector';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -81,12 +82,14 @@ import { AsignacionHorasComponent } from './components/asignacion-horas/asignaci
     EditarProductosComponent,
     EditarComprasComponent,
     AsignacionHorasComponent,
-    
+
+
 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    DeviceDetectorModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
