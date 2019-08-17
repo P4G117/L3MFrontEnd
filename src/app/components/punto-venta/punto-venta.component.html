@@ -1,33 +1,131 @@
-<div class="col-md-12 user-container">
-  <h2 style="margin: auto; padding: 10px"> Facturación</h2>
-    <table class="table table-striped">
-    <thead>
-    <tr>
-      <th></th>
-      <th class="hidden">Cajero</th>
-      <th>Sucursal</th>
-      <th>Productos(s)</th>
-      <th>Cantidad</th>
-      <th>Precio Unitario</th>
-      <th>Precio Total</th>
-      <th>Venta Total</th>
-      <th>Descuento</th>
-      <th>Impuesto</th>
+<div class="invoice-box">
+  <table cellpadding="0" cellspacing="0">
+      <tr class="top">
+          <td colspan="4">
+              <table>
+                   <tr>
+                    
+                      <td class="title">
+                          <img src="../../../assets/img/L3M.png" style="width:100%; max-width:200px;">
+                      </td>
+                      
+                      <td>
+                        <br>
+                          Supermercados Las 3 Marias<br>
+                          Fecha: 16 de Agosto 2019<br>
+                          Telefono: 2290 8732
+                        
+                      </td>
+                  </tr>
+              </table>
+          </td>
       </tr>
-    </thead>
-    <tbody>
-    <tr *ngFor="let user of users">
-      <td class="hidden"></td>
-      <td>{{user.cajero}}</td>
-      <td>{{user.sucursal}}</td>
-      <td>{{user.productos}}</td>
-      <td>{{user.cantidad}}</td>
-      <td>{{user.punit}}</td>
-      <td>{{user.ptotal}}</td>
-      <td>{{user.vtotal}}</td>
-      <td>{{user.descuento}}</td>
-      <td>{{user.impuesto}}</td>
+     
+      <tr class="heading">
+          <td>
+              Cajero
+          </td>
+          <td></td>
+          <td></td>
+          <td>
+              Sucursal 
+          </td>
+      </tr>
+      
+      <tr class="details">
+          <td>
+              Pablo Azofeifa
+          </td>
+          <td></td>
+          <td></td>
+          <td>
+              Cartago
+          </td>
+      </tr>
+      
+      <tr class="heading">
+          <td>
+              Producto
+          </td>
+          <td>
+              Cantidad
+          </td>
+          <td>
+             Precio Unitario
+          </td>
+          <td>
+             Precio Total
+          </td>
+      </tr>
+      
+      <tr class="item">
+          <td>
+              Papas Kitty 300g
+          </td>
+          <td>
+              3
+          </td>
+          <td>
+             250
+          </td>
+          <td>
+             750
+         </td>
+      </tr>
+
+      <tr class="item">
+        <td>
+            Coca Cola 600 ml
+        </td>
+        <td>
+            1
+        </td>
+        <td>
+           800
+        </td>
+        <td>
+           800
+       </td>
     </tr>
-    </tbody>
+
+    <tr class="item">
+       <td>
+           Leche Condensada 180g
+       </td>
+       <td>
+           4
+       </td>
+       <td>
+          950
+       </td>
+       <td>
+          3800
+       </td>
+    </tr>
+
+      <tr class="heading">
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>
+             Total: 5350.00
+          </td>
+      </tr>
+      <tr class="heading">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+           Impuestos: 1200.00
+        </td>
+    </tr>
+    <tr class="heading">
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>
+         Descuento: 0.00
+      </td>
+  </tr>
   </table>
 </div>

@@ -1,14 +1,14 @@
 <div class="split left">
-    <h2 class="text-center">Añadir Trabajadores</h2>
-    
+  <div class="centered">
+    <h2>Añadir Trabajadores</h2>
     <img class="center"  alt="Responsive image" style="width:300px;height:300px;" src="../../../assets/img/Añadir.png">
-
   </div>
+</div>
 
 <div class="split right">
 <div class="col-md-6 user-container">
     
-    
+    <div class ="column">
       <div class="form-group">
         <label for="trabnumero"><b>Trabajador Numero</b>:</label>
         <input formControlName="trabnumero" placeholder="Consecuente" name="trabnumero" class="form-control" id="trabnumero">
@@ -36,14 +36,15 @@
 
       <div class="form-group">
         <label for="fnacimiento"><b>Fecha Nacimiento</b></label>
-        <input formControlName="fnacimiento" placeholder="Fecha Nacimiento" name="fnacimiento" class="form-control" id="fnacimiento">
+        <input type="date" formControlName="fnacimiento" placeholder="Fecha Nacimiento" name="fnacimiento" class="form-control" id="fnacimiento">
       </div>
 
       <div class="form-group">
           <label for="fingreso"><b>Fecha Ingreso</b></label>
-          <input formControlName="fingreso" placeholder="Fecha Ingreso" name="fingreso" class="form-control" id="fingreso">
+          <input type="date" formControlName="fingreso" placeholder="Fecha Ingreso" name="fingreso" class="form-control" id="fingreso">
       </div>
-
+    </div>
+    <div class ="column">
       <div class="form-group">
           <label for="sucursaltrab"><b>Sucursal de Trabajo</b></label>
           <input formControlName="sucursaltrab" placeholder="Sucursal" name="sucursaltrab" class="form-control" id="sucursaltrab">
@@ -55,6 +56,6 @@
       </div>
   
       <button class="btn btn-success">Añadir</button>
-    
+    </div>
   </div>
   </div>

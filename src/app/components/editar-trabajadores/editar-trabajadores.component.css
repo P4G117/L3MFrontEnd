@@ -1,3 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+
+h2 {
+  position: relative;
+  left: -100px;
+  top: -100px;
+}
+
+
 .split {
     height: 100%;
     width: 50%;
@@ -28,19 +39,18 @@
   
   .centered img {
     width: 300px;
-    left: 0%;
-    top: 0%;
     border-radius: 50%;
   }
-  .center {
+  /*.center {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
     top: -0%;
-  }
+  }*/
 
-.logo {
-   width: 500px !important;
-   
-}
+  .logo {
+    width: 300px !important;
+    
+ }
+
