@@ -1,21 +1,33 @@
 <div class="split left">
   <div class="centered">
+<<<<<<< HEAD
     <img class="logo" src="../../../assets/img/L3M.png">
     <h2>Las 3 Marías Supermercados</h2>
     <p>Sistema de Gestión y Venta</p>
+=======
+    <img class="logo" src="../../../assets/img/L3M.png" style="width: 70%; height: auto">
+    <h2 style="font-size: 150%">Las 3 Marías Supermercados</h2>
+>>>>>>> 9ffd4a83421ffaee5b9346f178e679bc2e884b75
   </div>
 </div>
 
 <div class="split right">
   <div class="centered">
     <p>
-      <button type="button" class="fixed-top" class="btn btn-primary" [routerLink]="'/administration'">Administración</button>
+      <button type="button" id="btn1" class="fixed-top" class="btn btn-primary" [routerLink]="data1">{{text1}}</button>
     </p>
     <p>
-      <button type="button" class="fixed-bottom" class="btn btn-primary" [routerLink]="'/reportes'">Reportes</button>
+      <button type="button" id="btn2" class="fixed-bottom" class="btn btn-primary" [routerLink]="data2">{{text2}}</button>
     </p>
     <p>
-    <button type="button" class="fixed-top" class="btn btn-primary" [routerLink]="'/punto-venta'">Puntos de Venta</button>
+    <button type="button" id="btn3" class="fixed-top" class="btn btn-primary" [routerLink]="data3">{{text3}}</button>
     </p>
   </div>
 </div>
+
+<script>
+  if (mobile){
+    document.getElementById("btn1").nodeValue = "Gestion de trabajadores";
+  }
+
+</script>
