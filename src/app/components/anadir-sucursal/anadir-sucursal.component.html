@@ -10,26 +10,26 @@
     
     
       <div class="form-group">
-        <label for="numsucursal"><b>Número Sucursal</b>:</label>
-        <input formControlName="numsucursal" placeholder="Consecuente" name="numsucursal" class="form-control" id="numsucursal">
+        <label for="numsucursal"><b>Sucursal</b>:</label>
+        <input [(ngModel)]="productSucursales.sucursal_nombre" placeholder="Consecuente" name="numsucursal" class="form-control" id="numsucursal">
       </div>
   
       <div class="form-group">
-        <label for="sucursal"><b>Sucursal</b></label>
-        <input formControlName="sucursal" placeholder="Nombre Sucursal" name="sucursal" class="form-control" id="sucursal">
+        <label for="sucursal"><b>Dirección</b></label>
+        <input [(ngModel)]="productSucursales.sucursal_dir" placeholder="Nombre Sucursal" name="sucursal" class="form-control" id="sucursal">
       </div>
   
       <div class="form-group">
-        <label for="direccion"><b>Dirección</b></label>
-        <input formControlName="direccion" placeholder="Dirección" name="direccion" class="form-control" id="direccion">
+        <label for="direccion"><b>Telefono</b></label>
+        <input [(ngModel)]="productSucursales.sucursal_tel" placeholder="Dirección" name="direccion" class="form-control" id="direccion">
       </div>
   
       <div class="form-group">
         <label for="administrador"><b>Administrador</b></label>
-        <input formControlName="administrador" placeholder="Administrador" name="administrador" class="form-control" id="administrador">
+        <input [(ngModel)]="productSucursales.sucursal_admin" placeholder="Administrador" name="administrador" class="form-control" id="administrador">
       </div>
     
-      <button class="btn btn-success">Añadir</button>
+      <button class="btn btn-success"(click)="addSucursal()">Añadir</button>
     
   </div>
   </div>

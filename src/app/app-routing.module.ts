@@ -1,5 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AdministrationComponent } from './components/administration/administration.component';
 import { AsigancionHorasLaboradasComponent } from './components/asigancion-horas-laboradas/asigancion-horas-laboradas.component';
@@ -191,7 +195,13 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes),
+    FormsModule,
+    
+    HttpClientModule
+
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

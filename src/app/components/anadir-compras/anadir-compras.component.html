@@ -11,35 +11,35 @@
     
       <div class="form-group">
         <label for="descripcion"><b>Descripción</b>:</label>
-        <input formControlName="descripcion" placeholder="Descripción" name="descripcion" class="form-control" id="descripcion">
+        <input [(ngModel)]="productCompras.compras_descripcion" placeholder="Descripción" name="descripcion" class="form-control" id="descripcion">
       </div>
   
       <div class="form-group">
         <label for="frealcomp"><b>Fecha Real Compra</b></label>
-        <input type="date" formControlName="frealcomp" placeholder="Fecha" name="frealcomp" class="form-control" id="frealcomp">
+        <input type="date" [(ngModel)]="productCompras.compras_frelc" placeholder="Fecha" name="frealcomp" class="form-control" id="frealcomp">
       </div>
   
       <div class="form-group">
         <label for="fregcomp"><b>Fecha Registro Compra</b></label>
-        <input type="date" formControlName="fregcomp" placeholder="Fecha" name="fregcomp" class="form-control" id="fregcomp">
+        <input type="date" [(ngModel)]="productCompras.compras_fregc" placeholder="Fecha" name="fregcomp" class="form-control" id="fregcomp">
       </div>
   
       <div class="form-group">
         <label for="proveedor"><b>Proveedor</b></label>
-        <input formControlName="proveedor" placeholder="Nombre" name="proveedor" class="form-control" id="proveedor">
+        <input [(ngModel)]="productCompras.compras_prov" placeholder="Nombre" name="proveedor" class="form-control" id="proveedor">
       </div>
   
       <div class="form-group">
         <label for="foto"><b>Foto</b></label>
-        <input formControlName="foto" placeholder="Añadir Foto" name="foto" class="form-control" id="foto">
+        <input [(ngModel)]="productCompras.compras_foto" placeholder="Añadir Foto" name="foto" class="form-control" id="foto">
       </div>
 
       <div class="form-group">
         <label for="sucursal"><b>Sucursal</b></label>
-        <input formControlName="sucursal" placeholder="Sucursal" name="sucursal" class="form-control" id="sucursal">
+        <input [(ngModel)]="productCompras.compras_sucursal" placeholder="Sucursal" name="sucursal" class="form-control" id="sucursal">
       </div>
   
-      <button class="btn btn-success">Añadir</button>
+      <button class="btn btn-success" (click)="addCompras()" >Añadir</button>
     
   </div>
   </div>

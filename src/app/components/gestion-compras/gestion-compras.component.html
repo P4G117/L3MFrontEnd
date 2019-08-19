@@ -1,6 +1,6 @@
 <div class="col-md-12 user-container">
   <h2 style="margin: auto; padding: 10px"> Gestionar Compras</h2>
-  <button class="btn btn-danger" style="width:100px; margin: 15px; float:right" [routerLink]="'/anadir-compras'"> Agregar</button>
+  <button class="btn btn-danger" style="width:100px; margin: 15px; float:right" (click)="add()"> Agregar</button>
   <table class="table table-striped">
     <thead>
     <tr>
@@ -14,7 +14,7 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let user of users">
+    <tr *ngFor="let user of compras">
       <td class="hidden"></td>
       <td>{{user.descripcion}}</td>
       <td>{{user.frealcomp}}</td>
@@ -22,8 +22,8 @@
       <td>{{user.proveedor}}</td>
       <td>{{user.foto}}</td>
       <td>{{user.sucursal}}</td>
-      <td><button class="btn btn-success" > Eliminar</button>
-        <button class="btn btn-success" style="margin-left: 20px;" [routerLink]="'/editar-compras'"> Editar</button></td>
+      <td><button class="btn btn-success" (click)="delete(compras._id)" > Eliminar</button>
+        <button style="margin-left: 20px;" routerLink ="/editar-compras/{{compras._id}}"> Editar</button></td>
     </tr>
     </tbody>
   </table>

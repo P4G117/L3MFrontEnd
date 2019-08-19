@@ -11,51 +11,51 @@
     <div class ="column">
       <div class="form-group">
         <label for="trabnumero"><b>Trabajador Numero</b>:</label>
-        <input formControlName="trabnumero" placeholder="Consecuente" name="trabnumero" class="form-control" id="trabnumero">
+        <input [(ngModel)]="productTrabajadores.trab_num" placeholder="Consecuente" name="trabnumero" class="form-control" id="trabnumero">
       </div>
   
       <div class="form-group">
         <label for="nombre"><b>Nombre</b></label>
-        <input formControlName="nombre" placeholder="Nombre" name="nombre" class="form-control" id="nombre">
+        <input [(ngModel)]="productTrabajadores.trab_nombre" placeholder="Nombre" name="nombre" class="form-control" id="nombre">
       </div>
   
       <div class="form-group">
         <label for="apellido1"><b>Apellido 1</b></label>
-        <input formControlName="apellido1" placeholder="Apellido 1" name="apellido1" class="form-control" id="apellido1">
+        <input [(ngModel)]="productTrabajadores.trab_ape1" placeholder="Apellido 1" name="apellido1" class="form-control" id="apellido1">
       </div>
   
       <div class="form-group">
         <label for="apellido2"><b>Apellido 2</b></label>
-        <input formControlName="apellido2" placeholder="Apellido 2" name="apellido2" class="form-control" id="apellido2">
+        <input [(ngModel)]="productTrabajadores.trab_ape2" placeholder="Apellido 2" name="apellido2" class="form-control" id="apellido2">
       </div>
   
       <div class="form-group">
         <label for="cedula"><b>Cédula</b></label>
-        <input formControlName="cedula" placeholder="Cédula" name="cedula" class="form-control" id="cedula">
+        <input [(ngModel)]="productTrabajadores.trab_ced" placeholder="Cédula" name="cedula" class="form-control" id="cedula">
       </div>
 
       <div class="form-group">
         <label for="fnacimiento"><b>Fecha Nacimiento</b></label>
-        <input type="date" formControlName="fnacimiento" placeholder="Fecha Nacimiento" name="fnacimiento" class="form-control" id="fnacimiento">
+        <input type="date" [(ngModel)]="productTrabajadores.trab_fnac" placeholder="Fecha Nacimiento" name="fnacimiento" class="form-control" id="fnacimiento">
       </div>
 
       <div class="form-group">
           <label for="fingreso"><b>Fecha Ingreso</b></label>
-          <input type="date" formControlName="fingreso" placeholder="Fecha Ingreso" name="fingreso" class="form-control" id="fingreso">
+          <input type="date" [(ngModel)]="productTrabajadores.trab_fing" placeholder="Fecha Ingreso" name="fingreso" class="form-control" id="fingreso">
       </div>
     </div>
     <div class ="column">
       <div class="form-group">
           <label for="sucursaltrab"><b>Sucursal de Trabajo</b></label>
-          <input formControlName="sucursaltrab" placeholder="Sucursal" name="sucursaltrab" class="form-control" id="sucursaltrab">
+          <input [(ngModel)]="productTrabajadores.trab_sucursal" placeholder="Sucursal" name="sucursaltrab" class="form-control" id="sucursaltrab">
       </div>
 
       <div class="form-group">
           <label for="salhora"><b>Salario por Hora</b></label>
-          <input formControlName="salhora" placeholder="Salario" name="salhora" class="form-control" id="salhora">
+          <input [(ngModel)]="productTrabajadores.trab_salxh" placeholder="Salario" name="salhora" class="form-control" id="salhora">
       </div>
   
-      <button class="btn btn-success">Añadir</button>
+      <button class="btn btn-success" (click)="addTrabajador()">Añadir</button>
     </div>
   </div>
   </div>

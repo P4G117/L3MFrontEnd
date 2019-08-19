@@ -1,6 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { NgModule  } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
-import {Router} from "@angular/router";
+import { RestService } from 'src/app/services/rest.service';
+/*import {Router} from "@angular/router";*/
 
 @Component({
   selector: 'app-anadir-rol',
@@ -10,9 +13,21 @@ import {Router} from "@angular/router";
 
 export class AnadirRolComponent implements OnInit {
 
-  constructor() { }
+  @Input() productRol = { rol_id:'', rol_nombre: '', rol_ape1: '', rol_ape2:'', rol_rol: '' };
+
+  constructor(public rest:RestService, private route: ActivatedRoute, private router: Router) { 
+    
+  }
 
   ngOnInit() {
+  }
+
+  addRol() {
+    this.rest.addProduct(this.productRol).subscribe((result) => {
+      this.router.navigate(['/gestion-rol'+result._id]);
+    }, (err) => {
+      console.log(err);
+    });
   }
 
 }

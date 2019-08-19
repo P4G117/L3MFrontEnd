@@ -17,7 +17,7 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let user of users">
+    <tr *ngFor="let user of trabajadores">
       <td class="hidden"></td>
       <td>{{user.num}}</td>
       <td>{{user.nombre}}</td>
@@ -28,8 +28,8 @@
       <td>{{user.fing}}</td>
       <td>{{user.sucursal}}</td>
       <td>{{user.salariohora}}</td>
-      <td><button class="btn btn-success" > Eliminar</button>
-        <button class="btn btn-success" style="margin-left: 20px;"[routerLink]="'/editar-trabajadores'"> Editar</button></td>
+      <td><button class="btn btn-success" (click)="delete(trabajadores._id)"> Eliminar</button>
+        <button class="btn btn-success" style="margin-left: 20px;" routerLink ="/editar-trabajadores/{{trabajadores._id}}"> Editar</button></td>
     </tr>
     </tbody>
   </table>

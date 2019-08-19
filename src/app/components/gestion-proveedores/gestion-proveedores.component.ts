@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { NgModule  } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import { RestService } from 'src/app/services/rest.service'; 
 
 @Component({
   selector: 'app-gestion-proveedores',
@@ -7,19 +11,36 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GestionProveedoresComponent implements OnInit {
 
-  users: Array<any> = [
-    {num: 1, proveedor: 'nombre1', cedula: 192 },
-    {num: 2, proveedor: 'nombre2', cedula: 8932 },
-    {num: 3, proveedor: 'nombre3', cedula: 928392 },
-    {num: 4, proveedor: 'nombre4', cedula: 993 },
-    {num: 5, proveedor: 'nombre5', cedula: 8932 },
-    {num: 6, proveedor: 'nombre6', cedula: 743 },
-    {num: 7, proveedor: 'nombre7', cedula: 7483 }
-]; 
+  proveedores:any;
 
-  constructor() { }
+  constructor(public rest:RestService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
+    this.rest.getProduct(this.route.snapshot.params['id']).subscribe((data: {}) => {
+      console.log(data);
+      this.proveedores = data;
+    });
   }
 
+  getProducts() {
+    this.proveedores = [];
+    this.rest.getProducts().subscribe((data: {}) => {
+      console.log(data);
+      this.proveedores = data;
+    });
+  }
+
+  add() {
+    this.router.navigate(['/anadir-proveedor']);
+  }
+
+  delete(id) {
+    this.rest.deleteProduct(id)
+      .subscribe(res => {
+          this.getProducts();
+        }, (err) => {
+          console.log(err);
+        }
+      );
+  }
 }

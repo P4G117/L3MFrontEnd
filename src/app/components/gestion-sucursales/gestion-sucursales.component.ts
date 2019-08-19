@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { NgModule  } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import { RestService } from 'src/app/services/rest.service'; 
 
 @Component({
   selector: 'app-gestion-sucursales',
@@ -7,19 +11,37 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GestionSucursalesComponent implements OnInit {
 
-  users: Array<any> = [
-    {num: 1, sucursal: 'nombre1', direccion: 'dir1', telefono: 'tel1', administrador: 'admin1' },
-    {num: 2, sucursal: 'nombre2', direccion: 'dir2', telefono: 'tel2', administrador: 'admin2'},
-    {num: 3, sucursal: 'nombre3', direccion: 'dir3', telefono: 'tel3', administrador: 'admin3'},
-    {num: 4, sucursal: 'nombre4', direccion: 'dir4', telefono: 'tel4', administrador: 'admin4'},
-    {num: 5, sucursal: 'nombre5', direccion: 'dir5', telefono: 'tel5', administrador: 'admin5'},
-    {num: 6, sucursal: 'nombre6', direccion: 'dir6', telefono: 'tel6', administrador: 'admin6'},
-    {num: 7, sucursal: 'nombre7', direccion: 'dir7', telefono: 'tel7', administrador: 'admin7'}
-]; 
-  
-  constructor() { }
+  sucursales:any;
+
+  constructor(public rest:RestService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
+    this.rest.getProduct(this.route.snapshot.params['id']).subscribe((data: {}) => {
+      console.log(data);
+      this.sucursales = data;
+    });
+  }
+
+  getSucursales() {
+    this.sucursales = [];
+    this.rest.getProducts().subscribe((data: {}) => {
+      console.log(data);
+      this.sucursales = data;
+    });
+  }
+
+  add() {
+    this.router.navigate(['/anadir-sucursal']);
+  }
+
+  delete(id) {
+    this.rest.deleteProduct(id)
+      .subscribe(res => {
+          this.getSucursales();
+        }, (err) => {
+          console.log(err);
+        }
+      );
   }
 
 }
