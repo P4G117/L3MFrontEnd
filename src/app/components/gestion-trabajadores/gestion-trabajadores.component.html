@@ -1,6 +1,6 @@
 <div class="col-md-12 user-container">
   <h2 style="margin: auto; padding: 10px"> Gestionar Trabajadores</h2>
-  <button class="btn btn-danger" style="width:100px; margin: 15px; float:right" [routerLink]="'/anadir-trabajadores'"> Agregar</button>
+  <button class="btn btn-danger" style="width:100px; margin: 15px; float:right"> Agregar</button>
   <table class="table table-striped">
     <thead>
     <tr>
@@ -17,19 +17,19 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let user of trabajadores">
+    <tr *ngFor="let user of users">
       <td class="hidden"></td>
-      <td>{{user.num}}</td>
-      <td>{{user.nombre}}</td>
-      <td>{{user.ape1}}</td>
-      <td>{{user.ape2}}</td>
-      <td>{{user.ced}}</td>
-      <td>{{user.fnac}}</td>
-      <td>{{user.fing}}</td>
-      <td>{{user.sucursal}}</td>
-      <td>{{user.salariohora}}</td>
-      <td><button class="btn btn-success" (click)="delete(trabajadores._id)"> Eliminar</button>
-        <button class="btn btn-success" style="margin-left: 20px;" routerLink ="/editar-trabajadores/{{trabajadores._id}}"> Editar</button></td>
+      <td>{{user.ID}}</td>
+      <td>{{user.Name}}</td>
+      <td>{{user.Description}}</td>
+      <td>{{user.Discount}}</td>
+      <td>{{user.Tax}}</td>
+      <td>{{user.Price}}</td>
+      <td>{{user.Provider}}</td>
+      <td>{{user.Name}}</td>
+      <td>{{user.Description}}</td>
+      <td><button class="btn btn-success" > Eliminar</button>
+        <button class="btn btn-success" style="margin-left: 20px;" routerLink ="/editar-trabajadores/{{user.ID}}"> Editar</button></td>
     </tr>
     </tbody>
   </table>

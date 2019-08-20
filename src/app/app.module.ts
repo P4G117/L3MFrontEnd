@@ -95,8 +95,13 @@ import { AsignacionHorasComponent } from './components/asignacion-horas/asignaci
     AppRoutingModule,
     DeviceDetectorModule.forRoot(),
     FormsModule,
+    HttpClientModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+
+  ],
+  bootstrap: [
+    AppComponent
+  ]
 })
 export class AppModule { }

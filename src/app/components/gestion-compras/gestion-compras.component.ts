@@ -1,8 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { NgModule  } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import {FormBuilder, FormGroup, Validators} from "@angular/forms";
-import { RestService } from 'src/app/services/rest.service'; 
+import { User } from 'src/app/user.model';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-gestion-compras',
@@ -11,11 +9,16 @@ import { RestService } from 'src/app/services/rest.service';
 })
 export class GestionComprasComponent implements OnInit {
 
-  compras:any;
+  users: User[];
 
-  constructor(public rest:RestService, private route: ActivatedRoute, private router: Router) { }
+  constructor(private dataService: DataService) { }
 
-  ngOnInit() {
+  ngOnInit(){
+
+    return this.dataService.getUsers()
+    .subscribe(data => this.users = data); 
+  }
+  /*ngOnInit() {
     this.rest.getProduct(this.route.snapshot.params['id']).subscribe((data: {}) => {
       console.log(data);
       this.compras = data;
@@ -42,6 +45,6 @@ export class GestionComprasComponent implements OnInit {
           console.log(err);
         }
       );
-  }
+  }*/
 
 }

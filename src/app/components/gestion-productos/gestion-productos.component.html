@@ -1,6 +1,6 @@
 <div class="col-md-12 user-container">
   <h2 style="margin: auto; padding: 10px"> Gestionar Productos</h2>
-  <button class="btn btn-danger" style="width:100px; margin: 15px; float:right" (click)="add()"> Agregar</button>
+  <button class="btn btn-danger" style="width:100px; margin: 15px; float:right" > Agregar</button>
   <table class="table table-striped">
     <thead>
     <tr>
@@ -15,17 +15,17 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let user of productos">
+    <tr *ngFor="let user of users">
       <td class="hidden"></td>
-      <td>{{user.nombre}}</td>
-      <td>{{user.descripcion}}</td>
-      <td>{{user.code}}</td>
-      <td>{{user.proveedor}}</td>
-      <td>{{user.pcomp}}</td>
-      <td>{{user.imp}}</td>
-      <td>{{user.desc}}</td>
-      <td><button class="btn btn-success" (click)="delete(productos._id)"> Eliminar</button>
-        <button class="btn btn-success" style="margin-left: 20px;"routerLink ="/editar-productos/{{productos._id}}"> Editar</button></td>
+      <td>{{user.Name}}</td>
+      <td>{{user.Description}}</td>
+      <td>{{user.ID}}</td>
+      <td>{{user.Price}}</td>
+      <td>{{user.Provider}}</td>
+      <td>{{user.Tax}}</td>
+      <td>{{user.Discount}}</td>
+      <td><button class="btn btn-success" > Eliminar</button>
+        <button class="btn btn-success" style="margin-left: 20px;"routerLink ="/editar-productos/{{user.ID}}"> Editar</button></td>
     </tr>
     </tbody>
   </table>

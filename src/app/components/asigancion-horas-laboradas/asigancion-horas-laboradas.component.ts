@@ -1,8 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { NgModule  } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import {FormBuilder, FormGroup, Validators} from "@angular/forms";
-import { RestService } from 'src/app/services/rest.service'; 
+
 
 @Component({
   selector: 'app-asigancion-horas-laboradas',
@@ -13,8 +10,12 @@ export class AsigancionHorasLaboradasComponent implements OnInit {
 
   asighorlab:any;
 
-  constructor(public rest:RestService, private route: ActivatedRoute, private router: Router) { }
+  constructor() { }
 
+  ngOnInit() {
+  }
+
+/*
   ngOnInit() {
     this.rest.getProduct(this.route.snapshot.params['id']).subscribe((data: {}) => {
       console.log(data);
@@ -32,6 +33,6 @@ export class AsigancionHorasLaboradasComponent implements OnInit {
 
   add() {
     this.router.navigate(['/asignacion-horas']);
-  }
+  }*/
 
 }

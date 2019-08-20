@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
-import { ActivatedRoute, Router } from '@angular/router';
-import { RestService } from 'src/app/services/rest.service';
+import { User } from 'src/app/user.model';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-gestion-roles',
@@ -11,11 +10,17 @@ import { RestService } from 'src/app/services/rest.service';
 
 export class GestionRolesComponent implements OnInit {
 
-  roles:any = [];
+  users: User[];
 
-  constructor(public rest:RestService, private route: ActivatedRoute, private router: Router) { }
+  constructor(private dataService: DataService) { }
 
-  ngOnInit() {
+  ngOnInit(){
+
+    return this.dataService.getUsers()
+    .subscribe(data => this.users = data); 
+  }
+
+  /*ngOnInit() {
     this.rest.getProduct(this.route.snapshot.params['id']).subscribe((data: {}) => {
       console.log(data);
       this.roles = data;
@@ -42,6 +47,6 @@ export class GestionRolesComponent implements OnInit {
           console.log(err);
         }
       );
-  }
+  }*/
 
 }

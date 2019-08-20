@@ -1,8 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { NgModule  } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import {FormBuilder, FormGroup, Validators} from "@angular/forms";
-import { RestService } from 'src/app/services/rest.service'; 
+import { User } from 'src/app/user.model';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-gestion-productos',
@@ -11,11 +9,17 @@ import { RestService } from 'src/app/services/rest.service';
 })
 export class GestionProductosComponent implements OnInit {
 
-  productos:any;
+  users: User[];
 
-  constructor(public rest:RestService, private route: ActivatedRoute, private router: Router) { }
+  constructor(private dataService: DataService) { }
 
-  ngOnInit() {
+  ngOnInit(){
+
+    return this.dataService.getUsers()
+    .subscribe(data => this.users = data); 
+  }
+
+  /*ngOnInit() {
     this.rest.getProduct(this.route.snapshot.params['id']).subscribe((data: {}) => {
       console.log(data);
       this.productos = data;
@@ -42,6 +46,6 @@ export class GestionProductosComponent implements OnInit {
           console.log(err);
         }
       );
-  }
+  }*/
 
 }

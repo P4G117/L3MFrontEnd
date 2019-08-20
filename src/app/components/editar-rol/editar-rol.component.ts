@@ -1,8 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { NgModule  } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import {FormBuilder, FormGroup, Validators} from "@angular/forms";
-import { RestService } from 'src/app/services/rest.service'; 
+ 
 
 @Component({
   selector: 'app-editar-rol',
@@ -13,9 +10,14 @@ export class EditarRolComponent implements OnInit {
   
   @Input() productRol:any = { rol_id:'', rol_nombre: '', rol_ape1: '', rol_ape2:'', rol_rol: '' };
   
-  constructor(public rest:RestService, private route: ActivatedRoute, private router: Router) { }
+  constructor() { }
+
 
   ngOnInit() {
+  }
+
+
+  /*ngOnInit() {
     this.rest.getProduct(this.route.snapshot.params['id']).subscribe((data: {}) => {
       console.log(data);
       this.productRol = data;
@@ -28,6 +30,6 @@ export class EditarRolComponent implements OnInit {
     }, (err) => {
       console.log(err);
     });
-  }
+  }*/
 
 }
