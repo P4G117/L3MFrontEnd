@@ -1,5 +1,6 @@
 <div class="split left">
   <div class="centered">
+    <!--Encabezado Vista Edicio-->
       <h2>Editar Productos</h2>
       <img class="center"  alt="Responsive image" style="width:300px;height:300px;" src="../../../assets/img/Editar.png">
   </div>
@@ -9,40 +10,47 @@
   <div class="col-md-6 user-container">
    
         <div class="form-group">
+          <!--Contenedor para Ingresar Código de Barras-->
           <label for="nombre"><b>Código Barras</b></label>
           <input [(ngModel)]="productProductos.prod_nombre" placeholder="Nombre" name="nombre" class="form-control" id="nombre">
         </div>
   
         <div class="form-group">
+          <!--Contenedor para Ingresar Nombre-->
             <label for="descripcion"><b>Nombre</b>:</label>
             <input [(ngModel)]="productProductos.prod_desc" placeholder="Descripción" name="descripcion" class="form-control" id="descripcion">
           </div>
     
         <div class="form-group">
+          <!--Contenedor para Ingresar Decripcion-->
           <label for="code"><b>Descripción</b></label>
           <input [(ngModel)]="productProductos.prod_code" placeholder="Código" name="code" class="form-control" id="code">
         </div>
     
         <div class="form-group">
+          <!--Contenedor para Ingresar Precio-->
           <label for="proveedor"><b>Precio</b></label>
           <input [(ngModel)]="productProductos.prod_prov" placeholder="Nombre" name="proveedor" class="form-control" id="proveedor">
         </div>
     
         <div class="form-group">
+          <!--Contenedor para Ingresar Proveedor-->
           <label for="pcompra"><b>Proveedor</b></label>
           <input [(ngModel)]="productProductos.prod_compra" placeholder="Precio" name="pcompra" class="form-control" id="pcompra">
         </div>
   
         <div class="form-group">
+          <!--Contenedor para Ingresar Impuesto-->
           <label for="imp"><b>Impuesto</b>:</label>
           <input [(ngModel)]="productProductos.prod_imp" placeholder="Impuesto" name="imp" class="form-control" id="imp">
         </div>
   
         <div class="form-group">
+          <!--Contenedor para Ingresar Descuento-->
             <label for="desc"><b>Descuento</b>:</label>
             <input [(ngModel)]="productProductos.prod_descuento" placeholder="Descuento" name="desc" class="form-control" id="desc">
         </div>
-    
+        <!--Boton par Guardar-->
         <button class="btn btn-success" >Guardar</button>
       
     </div>

@@ -1,10 +1,12 @@
 <div class="col-md-12 user-container">
+  <!--Encabezado Vista-->
   <h2 style="margin: auto; padding: 10px"> Gestionar Productos</h2>
   <button class="btn btn-danger" style="width:100px; margin: 15px; float:right" > Agregar</button>
   <table class="table table-striped">
     <thead>
     <tr>
       <th></th>
+      <!--División de la Tabla-->
       <th class="hidden">Código Barras</th>
       <th>Nombres</th>
       <th>Descripción</th>
@@ -17,6 +19,7 @@
     <tbody>
     <tr *ngFor="let user of users">
       <td class="hidden"></td>
+      <!--Informacion Tabla-->
       <td>{{user.Barcode}}</td>
       <td>{{user.Name}}</td>
       <td>{{user.Description}}</td>

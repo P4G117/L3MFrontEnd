@@ -9,6 +9,7 @@ export class ListadoGastosComponent implements OnInit {
 
   constructor() { }
 
+  //Inicio de la Vista
   ngOnInit() {
   }
 

@@ -8,19 +8,13 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class AsignacionHorasComponent implements OnInit {
 
+  //Lista Prueba
   @Input() productAsigHorLab = { horaslab_nombre:'', horaslab_ape1:'', horaslab_ape2:'', horaslab_hsem:'', horaslab_hext:'' };
 
   constructor() { }
+//Inicia la Vista
 
   ngOnInit() {
   }
-/*
-  addHorasLab() {
-    this.rest.addProduct(this.productAsigHorLab).subscribe((result) => {
-      this.router.navigate(['/asignacion-horas-laboradas/'+result._id]);
-    }, (err) => {
-      console.log(err);
-    });
-  }*/
 
 }

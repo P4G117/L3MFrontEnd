@@ -1,5 +1,6 @@
 <div class="split left">
   <div class="centered">
+    <!--Encabezado Pagina-->
     <h2>Editar Sucursal</h2>
     <img class="center"  alt="Responsive image" style="width:300px;height:300px;" src="../../../assets/img/Editar.png">
   </div>
@@ -10,25 +11,29 @@
     
     
       <div class="form-group">
+        <!--Contenedor para Ingresar Nombre-->
         <label for="numsucursal"><b>Nombre</b>:</label>
         <input [(ngModel)]="productSucursales.sucursal_nombre" placeholder="Consecuente" name="numsucursal" class="form-control" id="numsucursal">
       </div>
   
       <div class="form-group">
+        <!--Contenedor para Ingresar Descripcion-->
         <label for="sucursal"><b>Dirección</b></label>
         <input [(ngModel)]="productSucursales.sucursal_dir" placeholder="Nombre Sucursal" name="sucursal" class="form-control" id="sucursal">
       </div>
   
       <div class="form-group">
+        <!--Contenedor para Ingresar Telefono-->
         <label for="direccion"><b>Telefono</b></label>
         <input [(ngModel)]="productSucursales.sucursal_tel" placeholder="Dirección" name="direccion" class="form-control" id="direccion">
       </div>
   
       <div class="form-group">
+        <!--Contenedor para Ingresar Administrador-->
         <label for="administrador"><b>Administrador</b></label>
         <input [(ngModel)]="productSucursales.sucursal_admin" placeholder="Administrador" name="administrador" class="form-control" id="administrador">
       </div>
-    
+      <!--Boton para Guardar-->
       <button class="btn btn-success" >Guardar</button>
     
   </div>

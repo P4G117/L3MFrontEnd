@@ -13,6 +13,7 @@ export class GestionSucursalesComponent implements OnInit {
 
   constructor(private dataService: DataService) { }
 
+  //Inicio y Carga de la Informacion de la Vista
   ngOnInit(){
 
     return this.dataService.getSucursal()

@@ -13,38 +13,10 @@ export class GestionProductosComponent implements OnInit {
 
   constructor(private dataService: DataService) { }
 
+  //Inicio y Carga de la Informacion para la Vista
   ngOnInit(){
     return this.dataService.getProducto()
     .subscribe(data => this.users = data); 
   }
-
-  /*ngOnInit() {
-    this.rest.getProduct(this.route.snapshot.params['id']).subscribe((data: {}) => {
-      console.log(data);
-      this.productos = data;
-    });
-  }
-
-  getProducts() {
-    this.productos = [];
-    this.rest.getProducts().subscribe((data: {}) => {
-      console.log(data);
-      this.productos = data;
-    });
-  }
-
-  add() {
-    this.router.navigate(['/anadir-productos']);
-  }
-
-  delete(id) {
-    this.rest.deleteProduct(id)
-      .subscribe(res => {
-          this.getProducts();
-        }, (err) => {
-          console.log(err);
-        }
-      );
-  }*/
 
 }

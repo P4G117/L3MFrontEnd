@@ -12,13 +12,5 @@ export class AnadirComprasComponent implements OnInit {
 
   ngOnInit() {
   }
-/*
-  addCompras() {
-    this.rest.addProduct(this.productCompras).subscribe((result) => {
-      this.router.navigate(['/gestion-compras/'+result._id]);
-    }, (err) => {
-      console.log(err);
-    });
-  }*/
 
 }

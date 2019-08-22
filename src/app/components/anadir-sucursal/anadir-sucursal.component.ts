@@ -11,16 +11,9 @@ export class AnadirSucursalComponent implements OnInit {
   @Input() productSucursales: any = { sucursal_nombre:'', sucursal_dir: '', sucursal_tel:'', sucursal_admin:'' };
 
   constructor() { }
-
+//Inicia la Vista
   ngOnInit() {
   }
-/*
-  addSucursal() {
-    this.rest.addProduct(this.productSucursales).subscribe((result) => {
-      this.router.navigate(['/gestion-sucursales/'+result._id]);
-    }, (err) => {
-      console.log(err);
-    });
-  }*/
+
 
 }

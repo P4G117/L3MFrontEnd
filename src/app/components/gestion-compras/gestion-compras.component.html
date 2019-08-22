@@ -1,10 +1,12 @@
 <div class="col-md-12 user-container">
+  <!--Encabezado Vista-->
   <h2 style="margin: auto; padding: 10px"> Gestionar Compras</h2>
   <button class="btn btn-danger" style="width:100px; margin: 15px; float:right" > Agregar</button>
   <table class="table table-striped">
     <thead>
     <tr>
       <th></th>
+      <!--Divisiones de la Tabla-->
       <th class="hidden">ID</th>
       <th>Descripción</th>
       <th>Fecha Real Compra</th>
@@ -17,6 +19,7 @@
     <tbody>
     <tr *ngFor="let user of users">
       <td class="hidden"></td>
+      <!--Información Tabla-->
       <td>{{user.ID}}</td>
       <td>{{user.Description}}</td>
       <td>{{user.RealDate}}</td>

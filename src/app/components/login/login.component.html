@@ -2,6 +2,7 @@
 
 <div class="split left">
   <div class="centered">
+    <!--Encabezado Vista-->
       <h2> Verificación de Identificación</h2>
     <img class="logo" class="rounded" alt="Responsive image" style="width:300px;height:300px;" src="../../../assets/img/Login.png">
     </div>
@@ -10,10 +11,12 @@
 <div class="split right">
   <div class="centered">
       <div class="col">
-        
+          <!--Contenedor Usuario-->
           <input type="text" name="username" placeholder="Usuario" required>
+          <!--Contenedor Contraseña-->
           <input type="password" name="password" placeholder="Contraseña" required>
-          <input type="submit" value="Login">
+          <!--Boton Login-->
+          <input type="submit" [routerLink]="'/dahsboard'" value="Login">
         </div>
     
   </div>

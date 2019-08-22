@@ -20,6 +20,7 @@ export class SucursalAComponent implements OnInit {
 
   constructor() { }
 
+  //Inicio Pagina
   ngOnInit() {
   }
 

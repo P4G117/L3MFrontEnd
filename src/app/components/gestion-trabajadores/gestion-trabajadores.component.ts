@@ -14,37 +14,11 @@ export class GestionTrabajadoresComponent implements OnInit {
 
   constructor(private dataService: DataService) { }
 
+  //Inicio y Carga de la Informacion de la Vista
   ngOnInit(){
 
     return this.dataService.getTrabajador()
     .subscribe(data => this.users = data); 
   }
-  /*ngOnInit() {
-    this.rest.getProduct(this.route.snapshot.params['id']).subscribe((data: {}) => {
-      console.log(data);
-      this.trabajadores = data;
-    });
-  }
-
-  getTrabajadores() {
-    this.trabajadores = [];
-    this.rest.getProducts().subscribe((data: {}) => {
-      console.log(data);
-      this.trabajadores = data;
-    });
-  }
-
-  add() {
-    this.router.navigate(['/anadir-trabajadores']);
-  }
-
-  delete(id) {
-    this.rest.deleteProduct(id)
-      .subscribe(res => {
-          this.getTrabajadores();
-        }, (err) => {
-          console.log(err);
-        }
-      );
-  }*/
+  
 }

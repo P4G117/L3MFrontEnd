@@ -8,19 +8,13 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class AnadirTrabajadoresComponent implements OnInit {
 
+  //Lista Prueba
   @Input() productTrabajadores: any = { trab_num: '', trab_nombre: '', trab_ape1:'', trab_ape2:'', trab_ced:'', trab_fnac:'', trab_fing:'', trab_sucursal:'', trab_salxh:'' };
 
   constructor() { }
-
+//Inicia la Vista
   ngOnInit() {
   }
-/*
-  addTrabajador() {
-    this.rest.addProduct(this.productTrabajadores).subscribe((result) => {
-      this.router.navigate(['/gestion-trabajadores/'+result._id]);
-    }, (err) => {
-      console.log(err);
-    });
-  }*/
+
 
 }

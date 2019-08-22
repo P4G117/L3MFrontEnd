@@ -11,15 +11,8 @@ export class AnadirProductosComponent implements OnInit {
   @Input() productProductos: any = { prod_nombre:'', prod_desc: '', prod_code: '',prod_prov: '', prod_compra:'', prod_imp:'', prod_descuento: '' };
 
   constructor() { }
-
+//Inicia la Vista
   ngOnInit() {
   }
-/*
-  addProductos() {
-    this.rest.addProduct(this.productProductos).subscribe((result) => {
-      this.router.navigate(['/gestion-compras/'+result._id]);
-    }, (err) => {
-      console.log(err);
-    });
-  }*/
+
 }

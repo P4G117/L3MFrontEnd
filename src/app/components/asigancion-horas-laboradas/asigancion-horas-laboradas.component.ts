@@ -9,32 +9,15 @@ import { DataService } from 'src/app/services/data.service';
 })
 export class AsigancionHorasLaboradasComponent implements OnInit {
 
+  //Lista donde estarían Datos
   users: HorasTrabajadas[];
 
   constructor(private dataService: DataService) { }
-
+  //Metodo para tarer los datos de la base de Datos y enseñarlos 
   ngOnInit(){
     return this.dataService.getHTrabajadas()
     .subscribe(data => this.users = data); 
   }
-/*
-  ngOnInit() {
-    this.rest.getProduct(this.route.snapshot.params['id']).subscribe((data: {}) => {
-      console.log(data);
-      this.asighorlab = data;
-    });
-  }
 
-  getProducts() {
-    this.asighorlab = [];
-    this.rest.getProducts().subscribe((data: {}) => {
-      console.log(data);
-      this.asighorlab = data;
-    });
-  }
-
-  add() {
-    this.router.navigate(['/asignacion-horas']);
-  }*/
 
 }

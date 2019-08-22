@@ -1,5 +1,6 @@
 <div class="split left">
   <div class="centered">
+    <!--Encabezado Vista Proveedores-->
       <h2>Editar Proveedores</h2>
       <img class="center"  alt="Responsive image" style="width:300px;height:300px;" src="../../../assets/img/Editar.png">
     </div>
@@ -9,15 +10,17 @@
   <div class="col-md-6 user-container">
       
         <div class="form-group">
+          <!--Contenedor para Nombre-->
           <label for="nombreprov"><b>Nombre</b></label>
           <input [(ngModel)]="productProveedores.prov_nombre" placeholder="Proveedor" name="nombreprov" class="form-control" id="nombreprov">
         </div>
     
         <div class="form-group">
+          <!--Contenedor para Ingresar Cédula-->
           <label for="cedula"><b>Cédula</b></label>
           <input [(ngModel)]="productProveedores.prov_cedula" placeholder="Física o Jurídica" name="apellido1" class="form-control" id="apellido1">
         </div>
-   
+        <!--Boton de Guardar-->
         <button class="btn btn-success">Guardar</button>
       
     </div>

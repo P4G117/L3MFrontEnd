@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GastosSucursalCComponent implements OnInit {
 
+  //Lista Prueba
   users: Array<any> = [
     {fechagsc: 'fecha1c', proveedorgsc: 'prov1c', descripciongsc: 'desc1c', montogsc: 'monto1c'},
     {fechagsc: 'fecha2c', proveedorgsc: 'prov2c', descripciongsc: 'desc2c', montogsc: 'monto2c'},
@@ -19,6 +20,7 @@ export class GastosSucursalCComponent implements OnInit {
 ]; 
   constructor() { }
 
+  //Inicia Vista
   ngOnInit() {
   }
 

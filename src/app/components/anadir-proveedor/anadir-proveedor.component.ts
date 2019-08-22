@@ -8,19 +8,12 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class AnadirProveedorComponent implements OnInit {
 
+  //Lista Prueba
   @Input() productProveedores: any = { prov_num: '', prov_nombre:'', prov_cedula: '' };
 
   constructor() { }
-
+//Inicia la vista
   ngOnInit() {
   }
-/*
-  addProveedor() {
-    this.rest.addProduct(this.productProveedores).subscribe((result) => {
-      this.router.navigate(['/gestion-proveedores/'+result._id]);
-    }, (err) => {
-      console.log(err);
-    });
-  }*/
 
 }

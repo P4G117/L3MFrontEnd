@@ -11,6 +11,7 @@ export class LoginComponent implements OnInit {
 
   constructor(private Data: DataService, private router: Router) { }
 
+  //Inicio Vista
   ngOnInit() {
   }
 
@@ -19,16 +20,6 @@ export class LoginComponent implements OnInit {
     const target = event.target
     const username = target.querySelector('#username').value
     const password = target.querySelector('#password').value
-
-    this.Data.getUserDetails(username, password).subscribe(data => {
-      if(data.success) {
-        this.router.navigate(['dashboard'])
-        this.Data.setLoggedIn(true)
-      } else {
-        window.alert(data.message)
-      }
-    })
-    console.log(username, password)
   }
 
 }

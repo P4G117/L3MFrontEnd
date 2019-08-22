@@ -9,6 +9,7 @@ export class ListadoProductosSucursalComponent implements OnInit {
 
   constructor() { }
 
+  //Inicio Vista
   ngOnInit() {
   }
 

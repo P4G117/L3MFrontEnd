@@ -9,6 +9,7 @@ export class ReportesComponent implements OnInit {
 
   constructor() { }
 
+  //Inicio Vista
   ngOnInit() {
   }
 

@@ -13,38 +13,11 @@ export class GestionComprasComponent implements OnInit {
 
   constructor(private dataService: DataService) { }
 
+  //Inicio y carga de informacion de la Vista
   ngOnInit(){
 
     return this.dataService.getCompras()
     .subscribe(data => this.users = data); 
   }
-  /*ngOnInit() {
-    this.rest.getProduct(this.route.snapshot.params['id']).subscribe((data: {}) => {
-      console.log(data);
-      this.compras = data;
-    });
-  }
-
-  getProducts() {
-    this.compras = [];
-    this.rest.getProducts().subscribe((data: {}) => {
-      console.log(data);
-      this.compras = data;
-    });
-  }
-
-  add() {
-    this.router.navigate(['/anadir-compras']);
-  }
-
-  delete(id) {
-    this.rest.deleteProduct(id)
-      .subscribe(res => {
-          this.getProducts();
-        }, (err) => {
-          console.log(err);
-        }
-      );
-  }*/
 
 }

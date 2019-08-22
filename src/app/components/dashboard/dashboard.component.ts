@@ -46,7 +46,7 @@ export class DashboardComponent implements OnInit {
       document.getElementById('btn1').nodeValue = 'hola';
     }
   }
-
+  // Metodos para la Vista Web
   public isDesktop() {
     this.isDesktopvar = this.deviceService.isDesktop();
     desktop = this.isDesktopvar;

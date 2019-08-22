@@ -1,9 +1,11 @@
 <div class="col-md-12 user-container">
+  <!--Encabezado Vista-->
   <h2 style="margin: auto; padding: 10px"> Listado de Productos Sucursal C</h2>
     <table class="table table-striped">
     <thead>
     <tr>
       <th></th>
+      <!--Division Tabla-->
       <th class="hidden">Código Barra</th>
       <th>Nombre</th>
       <th>Descripción</th>
@@ -14,6 +16,7 @@
     <tbody>
     <tr *ngFor="let user of users">
       <td class="hidden"></td>
+      <!--Informacion Tabla-->
       <td>{{user.productosc}}</td>
       <td>{{user.productosc}}</td>
       <td>{{user.descripcionsc}}</td>

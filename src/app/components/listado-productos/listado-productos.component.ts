@@ -13,8 +13,8 @@ export class ListadoProductosComponent implements OnInit {
 
   constructor(private dataService: DataService) { }
 
+  //Inicio y Carga de la Informacion de la Vista
   ngOnInit(){
-
     return this.dataService.getInventario()
     .subscribe(data => this.users = data); 
   }
