@@ -5,27 +5,19 @@
     <thead>
     <tr>
         <th></th>
-      <th class="hidden">Id</th>
-      <th>Nombre</th>
-      
-      <th>Apellido 1</th>
-      
-      <th>Apellido 2</th>
-      
-      <th>Rol</th>
-      
+      <th class="hidden">Nombre</th>
+      <th>Descripción</th>
+           
     </tr>
     </thead>
     <tbody>
     <tr *ngFor="let user of users">
       <td class="hidden"></td>
-      <td>{{user.ID}}</td>
       <td>{{user.Name}}</td>
-      <td>{{user.Tax}}</td>
       <td>{{user.Description}}</td>
-      <td>{{user.Price}}</td>
+     
       <td><button class="btn btn-success" > Eliminar</button>
-        <button routerLink ="/editar-rol/{{user.ID}}"  style="margin-left: 20px;"> Editar</button></td>
+        <button class="btn btn-success" style="margin-left: 20px;"> Editar</button></td>
     </tr>
     </tbody>
   </table>

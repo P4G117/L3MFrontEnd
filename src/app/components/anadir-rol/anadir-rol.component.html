@@ -1,5 +1,6 @@
 <div class="split left">
   <div class="centered">
+    <!--Encabezado Vista de Añadir Rol-->
     <h2>Añadir Rol</h2>
     <img class="center"  alt="Responsive image" style="width:300px;height:300px;" src="../../../assets/img/Añadir.png">
   </div>
@@ -10,31 +11,19 @@
     
     
       <div class="form-group">
-        <label for="id"><b>ID</b>:</label>
-        <input [(ngModel)]="productRol.rol_id" placeholder="ID" name="id" class="form-control" id="id">
+        <!--Contenedor para Ingresar Nombre-->
+        <label for="id"><b>Nombre</b>:</label>
+        <input [(ngModel)]="Nombre" placeholder="ID" name="id" class="form-control" id="id">
       </div>
   
       <div class="form-group">
-        <label for="nombre"><b>Nombre</b></label>
-        <input [(ngModel)]="productRol.rol_nombre" placeholder="Nombre" name="nombre" class="form-control" id="nombre">
+        <!--Contenedor para Ingresar Descripcion-->
+        <label for="nombre"><b>Descripcion</b></label>
+        <input [(ngModel)]="Descripcion" placeholder="Nombre" name="nombre" class="form-control" id="nombre">
       </div>
-  
-      <div class="form-group">
-        <label for="apellido1"><b>Apellido 1</b></label>
-        <input [(ngModel)]="productRol.rol_ape1" placeholder="Apellido 1" name="apellido1" class="form-control" id="apellido1">
-      </div>
-  
-      <div class="form-group">
-        <label for="apellido2"><b>Apellido 2</b></label>
-        <input [(ngModel)]="productRol.rol_ape2" placeholder="Apellido 2" name="apellido2" class="form-control" id="apellido2">
-      </div>
-  
-      <div class="form-group">
-        <label for="rol"><b>Rol</b></label>
-        <input [(ngModel)]="productRol.rol_rol" placeholder="Rol" name="rol" class="form-control" id="rol">
-      </div>
-  
-      <button class="btn btn-success" (click)="addRol()">Añadir</button>
+      <!--Boton de Añadir-->
+      <button class="btn btn-success" (click)="PostData()" >Añadir</button>
+      <p>Prueba: {{Funciono}}</p>
     
   </div>
   </div>

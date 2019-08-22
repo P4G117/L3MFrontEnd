@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {  Inventario } from 'src/app/user.model';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-listado-productos',
@@ -7,20 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListadoProductosComponent implements OnInit {
 
-  users: Array<any> = [
-    {producto: 'prod1', precioprod: 'pprod1', existencia: 'fregcomop1'},
-    {producto: 'prod1', precioprod: 'pprod1', existencia: 'fregcomop1'},
-    {producto: 'prod1', precioprod: 'pprod1', existencia: 'fregcomop1'},
-    {producto: 'prod1', precioprod: 'pprod1', existencia: 'fregcomop1'},
-    {producto: 'prod1', precioprod: 'pprod1', existencia: 'fregcomop1'},
-    {producto: 'prod1', precioprod: 'pprod1', existencia: 'fregcomop1'},
-    {producto: 'prod1', precioprod: 'pprod1', existencia: 'fregcomop1'},
-    {producto: 'prod1', precioprod: 'pprod1', existencia: 'fregcomop1'}
-]; 
-  
-  constructor() { }
+  users: Inventario[];
 
-  ngOnInit() {
+  constructor(private dataService: DataService) { }
+
+  ngOnInit(){
+
+    return this.dataService.getInventario()
+    .subscribe(data => this.users = data); 
   }
 
 }

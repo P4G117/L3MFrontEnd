@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {DeviceDetectorModule} from 'ngx-device-detector';
-
+import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { FormsModule } from '@angular/forms';
@@ -95,7 +95,8 @@ import { AsignacionHorasComponent } from './components/asignacion-horas/asignaci
     AppRoutingModule,
     DeviceDetectorModule.forRoot(),
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [
 

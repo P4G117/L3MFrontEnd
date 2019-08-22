@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from 'src/app/user.model';
+import { Rol } from 'src/app/user.model';
 import { DataService } from 'src/app/services/data.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-gestion-roles',
@@ -10,15 +11,25 @@ import { DataService } from 'src/app/services/data.service';
 
 export class GestionRolesComponent implements OnInit {
 
-  users: User[];
+  users: Rol[];
 
   constructor(private dataService: DataService) { }
 
   ngOnInit(){
-
-    return this.dataService.getUsers()
+    return this.dataService.getRol()
     .subscribe(data => this.users = data); 
   }
+
+  /*editarRol(id){
+    //this.router.navigate(['editar-rol'])
+    return this.dataService.GetRol(id)
+    .subscribe(data => this.users = data)
+  }
+
+  eliminarRol(id){
+    return this.dataService.DeleteRol(id)
+    .subscribe(data => this.users = data)
+  }*/
 
   /*ngOnInit() {
     this.rest.getProduct(this.route.snapshot.params['id']).subscribe((data: {}) => {

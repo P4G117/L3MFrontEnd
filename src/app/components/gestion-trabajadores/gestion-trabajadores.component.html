@@ -5,31 +5,27 @@
     <thead>
     <tr>
       <th></th>
-      <th class="hidden">#</th>
+      <th class="hidden">Cédula</th>
       <th>Nombre</th>
-      <th>Apellido 1</th>
-      <th>Apellido 2</th>
-      <th>Cedula</th>
       <th>Fecha Nacimiento</th>
       <th>Fecha Ingreso</th>
       <th>Sucursal</th>
+      <th>Rol</th>
       <th>Salario Hora</th>
     </tr>
     </thead>
     <tbody>
     <tr *ngFor="let user of users">
       <td class="hidden"></td>
-      <td>{{user.ID}}</td>
+      <td>{{user.IndentificationCard}}</td>
       <td>{{user.Name}}</td>
-      <td>{{user.Description}}</td>
-      <td>{{user.Discount}}</td>
-      <td>{{user.Tax}}</td>
-      <td>{{user.Price}}</td>
-      <td>{{user.Provider}}</td>
+      <td>{{user.BirthDate}}</td>
+      <td>{{user.AdmissionDate}}</td>
+      <td>{{user.BranchOffice}}</td>
       <td>{{user.Name}}</td>
-      <td>{{user.Description}}</td>
+      <td>{{user.HourlyWage}}</td>
       <td><button class="btn btn-success" > Eliminar</button>
-        <button class="btn btn-success" style="margin-left: 20px;" routerLink ="/editar-trabajadores/{{user.ID}}"> Editar</button></td>
+        <button class="btn btn-success" style="margin-left: 20px;" > Editar</button></td>
     </tr>
     </tbody>
   </table>

@@ -8,6 +8,10 @@
   <div class="split right">
   <div class="col-md-6 user-container">
       
+        <div class="form-group">
+          <label for="descripcion"><b>Descripción</b>:</label>
+          <input [(ngModel)]="productCompras.compras_descripcion" placeholder="Descripción" name="descripcion" class="form-control" id="descripcion">
+        </div>
       
         <div class="form-group">
           <label for="descripcion"><b>Descripción</b>:</label>
@@ -39,7 +43,7 @@
           <input [(ngModel)]="productCompras.compras_sucursal" placeholder="Sucursal" name="sucursal" class="form-control" id="sucursal">
         </div>
 
-        <button class="btn btn-success"(click)="updateCompra()">Guardar</button>
+        <button class="btn btn-success">Guardar</button>
     
   </div>
   </div>

@@ -5,11 +5,11 @@
     <thead>
     <tr>
       <th></th>
-      <th class="hidden">Nombre</th>
-      <th>Descripcion</th>
-      <th>Código Baras</th>
+      <th class="hidden">Código Barras</th>
+      <th>Nombres</th>
+      <th>Descripción</th>
+      <th>Precio</th>
       <th>Proveedor</th>
-      <th>Precio Compra</th>
       <th>Impuesto</th>
       <th>Descuento</th>
     </tr>
@@ -17,15 +17,14 @@
     <tbody>
     <tr *ngFor="let user of users">
       <td class="hidden"></td>
+      <td>{{user.Barcode}}</td>
       <td>{{user.Name}}</td>
       <td>{{user.Description}}</td>
-      <td>{{user.ID}}</td>
-      <td>{{user.Price}}</td>
-      <td>{{user.Provider}}</td>
+      <td>{{user.Supplier}}</td>
       <td>{{user.Tax}}</td>
       <td>{{user.Discount}}</td>
       <td><button class="btn btn-success" > Eliminar</button>
-        <button class="btn btn-success" style="margin-left: 20px;"routerLink ="/editar-productos/{{user.ID}}"> Editar</button></td>
+        <button class="btn btn-success" style="margin-left: 20px;"> Editar</button></td>
     </tr>
     </tbody>
   </table>

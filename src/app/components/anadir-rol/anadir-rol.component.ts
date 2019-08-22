@@ -1,4 +1,8 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, NgZone } from '@angular/core';
+import { DataService } from 'src/app/services/data.service';
+import { Router } from '@angular/router';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { Rol } from 'src/app/user.model';
 
 
 @Component({
@@ -9,22 +13,73 @@ import { Component, OnInit, Input } from '@angular/core';
 
 export class AnadirRolComponent implements OnInit {
 
-  @Input() productRol = { rol_id:'', rol_nombre: '', rol_ape1: '', rol_ape2:'', rol_rol: '' };
+  issueForm: FormGroup;
 
-  constructor() { 
+  Nombre=null;
+  Descripcion: null;
+  Funciono=null; 
+
+  ngOnInit() {
+    this.addIssue()
+  }
+  hola;
+  
+  constructor(private dataService: DataService, private router: Router, private ngZone: NgZone, public fb: FormBuilder,) { 
     
   }
 
-  ngOnInit() {
+  addIssue() {
+    this.issueForm = this.fb.group({
+      issue_name: [''],
+      issue_message: ['']
+    })
   }
-/*
-  addRol() {
-    this.rest.addProduct(this.productRol).subscribe((result) => {
-      this.router.navigate(['/gestion-rol'+result._id]);
-    }, (err) => {
-      console.log(err);
-    });
-  }*/
+
+PostData(){
+  const url = "http://192.168.100.21:8080/api/Roles" 
+  const retVal = this.dataService.post(url, {Name: this.Nombre, Description: this.Descripcion}).subscribe
+  (data =>{this.hola = data});
+}
+
+
+  createTraveller(){
+    let traveller:Rol = {
+      Name: this.Nombre,
+      Description: this.Descripcion,
+
+    };
+ // uses instance of data access service to call createTraveller function   
+ this.dataService.createTraveller(traveller)
+      .subscribe(
+        success => alert("Done"),
+        error => alert(error)
+      );
+  }
+
+
+  prueba(){
+    //this.Funciono = this.Nombre + this.Descripcion;
+
+    this.Funciono = this.Nombre + this.Descripcion
+  }
+
+  addRol(){
+    this.Funciono = this.Nombre + this.Descripcion;
+    return this.dataService.postRol(this.Nombre)
+    .subscribe(res => {
+      console.log('Issue added!')
+      this.ngZone.run(() => this.router.navigateByUrl('/gestion-rol'))
+      });
+  }
+  
+  RegisterUser(Nombre){ 
+    console.log(Nombre);
+    // User data which we have received from the registration form.
+    this.dataService.registerUsers(Nombre).subscribe((Nombre)=>{
+      console.log(Nombre);
+     }); 
+  }
+
 
 }
 

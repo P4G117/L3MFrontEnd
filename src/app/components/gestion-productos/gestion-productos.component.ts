@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { User } from 'src/app/user.model';
+import { Producto } from 'src/app/user.model';
 import { DataService } from 'src/app/services/data.service';
 
 @Component({
@@ -9,13 +9,12 @@ import { DataService } from 'src/app/services/data.service';
 })
 export class GestionProductosComponent implements OnInit {
 
-  users: User[];
+  users: Producto[];
 
   constructor(private dataService: DataService) { }
 
   ngOnInit(){
-
-    return this.dataService.getUsers()
+    return this.dataService.getProducto()
     .subscribe(data => this.users = data); 
   }
 

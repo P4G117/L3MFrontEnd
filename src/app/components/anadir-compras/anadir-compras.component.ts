@@ -8,9 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class AnadirComprasComponent implements OnInit {
 
-  @Input() productCompras = { compras_descripcion:'', compras_frelc: '', compras_fregc: '',compras_prov: '', compras_foto:'', compras_sucursal:'' };
-
-  constructor() { }
+    constructor() { }
 
   ngOnInit() {
   }

@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-
+import {  Inventario, HorasTrabajadas } from 'src/app/user.model';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-asigancion-horas-laboradas',
@@ -8,13 +9,14 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class AsigancionHorasLaboradasComponent implements OnInit {
 
-  asighorlab:any;
+  users: HorasTrabajadas[];
 
-  constructor() { }
+  constructor(private dataService: DataService) { }
 
-  ngOnInit() {
+  ngOnInit(){
+    return this.dataService.getHTrabajadas()
+    .subscribe(data => this.users = data); 
   }
-
 /*
   ngOnInit() {
     this.rest.getProduct(this.route.snapshot.params['id']).subscribe((data: {}) => {

@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { User } from 'src/app/user.model';
+import {  Compras } from 'src/app/user.model';
 import { DataService } from 'src/app/services/data.service';
 
 @Component({
@@ -9,13 +9,13 @@ import { DataService } from 'src/app/services/data.service';
 })
 export class GestionComprasComponent implements OnInit {
 
-  users: User[];
+  users: Compras[];
 
   constructor(private dataService: DataService) { }
 
   ngOnInit(){
 
-    return this.dataService.getUsers()
+    return this.dataService.getCompras()
     .subscribe(data => this.users = data); 
   }
   /*ngOnInit() {

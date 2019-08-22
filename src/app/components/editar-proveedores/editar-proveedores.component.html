@@ -8,14 +8,8 @@
   <div class="split right">
   <div class="col-md-6 user-container">
       
-      
         <div class="form-group">
-          <label for="numprov"><b>Proveedor</b>:</label>
-          <input [(ngModel)]="productProveedores.prov_num" placeholder="Consecuente" name="numprov" class="form-control" id="numprov">
-        </div>
-    
-        <div class="form-group">
-          <label for="nombreprov"><b>Nombre Proveedor</b></label>
+          <label for="nombreprov"><b>Nombre</b></label>
           <input [(ngModel)]="productProveedores.prov_nombre" placeholder="Proveedor" name="nombreprov" class="form-control" id="nombreprov">
         </div>
     
@@ -24,7 +18,7 @@
           <input [(ngModel)]="productProveedores.prov_cedula" placeholder="Física o Jurídica" name="apellido1" class="form-control" id="apellido1">
         </div>
    
-        <button class="btn btn-success"(click)="updateProveedor()">Guardar</button>
+        <button class="btn btn-success">Guardar</button>
       
     </div>
     </div>

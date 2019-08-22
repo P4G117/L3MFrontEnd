@@ -1,5 +1,7 @@
+<!--Vista para Añadir Compras-->
 <div class="split left">
   <div class="centered">
+    <!--Encabezado de la Pagina-->
     <h2>Añadir Compras</h2>
     <img class="center"  alt="Responsive image" style="width:300px;height:300px;" src="../../../assets/img/Añadir.png">
   </div>
@@ -8,38 +10,49 @@
 <div class="split right">
 <div class="col-md-6 user-container">
     
+      <div class="form-group">
+        <!--Contenedor para Ingresar ID-->
+        <label for="descripcion"><b>ID</b>:</label>
+        <input [(ngModel)]="productCompras.compras_descripcion" placeholder="Descripción" name="descripcion" class="form-control" id="descripcion">
+      </div>
     
       <div class="form-group">
+        <!--Contenedor para Ingresar Descripción-->
         <label for="descripcion"><b>Descripción</b>:</label>
         <input [(ngModel)]="productCompras.compras_descripcion" placeholder="Descripción" name="descripcion" class="form-control" id="descripcion">
       </div>
   
       <div class="form-group">
+        <!--Contenedor para Ingresar Fecha Real Compra-->
         <label for="frealcomp"><b>Fecha Real Compra</b></label>
         <input type="date" [(ngModel)]="productCompras.compras_frelc" placeholder="Fecha" name="frealcomp" class="form-control" id="frealcomp">
       </div>
   
       <div class="form-group">
+        <!--Contenedor para Ingresar Fecha Registro Compra-->
         <label for="fregcomp"><b>Fecha Registro Compra</b></label>
         <input type="date" [(ngModel)]="productCompras.compras_fregc" placeholder="Fecha" name="fregcomp" class="form-control" id="fregcomp">
       </div>
   
       <div class="form-group">
+        <!--Contenedor para Ingresar Proveedor-->
         <label for="proveedor"><b>Proveedor</b></label>
         <input [(ngModel)]="productCompras.compras_prov" placeholder="Nombre" name="proveedor" class="form-control" id="proveedor">
       </div>
   
       <div class="form-group">
+        <!--Contenedor para Ingresar Foto-->
         <label for="foto"><b>Foto</b></label>
         <input [(ngModel)]="productCompras.compras_foto" placeholder="Añadir Foto" name="foto" class="form-control" id="foto">
       </div>
 
       <div class="form-group">
+        <!--Contenedor para Ingresar Sucursal-->
         <label for="sucursal"><b>Sucursal</b></label>
         <input [(ngModel)]="productCompras.compras_sucursal" placeholder="Sucursal" name="sucursal" class="form-control" id="sucursal">
       </div>
-  
-      <button class="btn btn-success" (click)="addCompras()" >Añadir</button>
+      <!--Boton para Añadir-->
+      <button class="btn btn-success" >Añadir</button>
     
   </div>
   </div>

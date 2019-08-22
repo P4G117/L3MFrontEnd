@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AdministrationComponent } from './components/administration/administration.component';
@@ -198,7 +198,7 @@ const routes: Routes = [
   imports: [
     RouterModule.forRoot(routes),
     FormsModule,
-    
+    ReactiveFormsModule,
     HttpClientModule
 
   ],
